@@ -37,7 +37,7 @@ github repository like so:
 
 .. code-block:: bash
 
-   pip install git+git://github.com/tenable/pytenable.git#egg=pytenable
+   pip install git+https://github.com/arvindcms/pyTenable.git#egg=pytenable
 
 Getting Started
 ---------------
