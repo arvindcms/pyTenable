@@ -40,6 +40,7 @@ Tenable Security Center
     scan_zones
     scanners
     scans
+    reports
     status
     system
     users
@@ -69,6 +70,7 @@ from .repositories import RepositoryAPI
 from .roles import RoleAPI
 from .scanners import ScannerAPI
 from .scans import ScanAPI
+from .reports import ReportAPI
 from .scan_instances import ScanResultAPI
 from .scan_zones import ScanZoneAPI
 from .status import StatusAPI
@@ -461,6 +463,14 @@ class TenableSC(APIPlatform):  # noqa PLR0904
         :doc:`Tenable Security Center Scans APIs <scans>`.
         '''
         return ScanAPI(self)
+
+    @property
+    def reports(self):
+        '''
+        The interface object for the
+        :doc:`Tenable Security Center Reports APIs <report>`.
+        '''
+        return ReportAPI(self)
 
     @property
     def scan_instances(self):
